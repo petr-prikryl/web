@@ -2,45 +2,23 @@
 <html>
   <head>
     <style>
-.auto-grid {
-  --auto-grid-min-size: 32rem;
-  
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  grid-gap: 1rem;
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
 }
 
-body {
-  background: #efefef;
-  padding: 1rem;
-  line-height: 1.4;
-  font-family: sans-serif;
-}
-
-li {
-  padding: 2rem 1rem;
-  text-align: center;
-  font-size: 1.2rem;
-  background: #eb4d4b;
-  color: #ffffff;
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
 }
 </style>
   </head>
 <body>
 
 <h1>Kamery Zlín</h1>
-
-  <ul class="auto-grid">
-  <li><iframe width=auto id="video" height=auto src="https://www.youtube.com/embed/CSAcxQA2shE?si=3f2fQxLz2MCTbuRQ&amp;controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></li>
-  <li><iframe width=auto id="video" height=auto src="https://www.youtube.com/embed/bPLhbmqbLcs?si=ajwgSfEx1K6NNNpp&amp;controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></li>
-  <li><iframe width=auto id="video" height=auto src="https://www.youtube.com/embed/6GTSdD7rKwE?si=caTujpLaawCNJlF0&amp;controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></li>
-  <li><iframe width=auto id="video" height=auto src="https://www.youtube.com/embed/0Ua8_c0Nphg?si=E-8nPZgLUBOp0nX2&amp;controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></li>
-  <li><iframe width=auto id="video" height=auto src="https://www.youtube.com/embed/eJlH1ieQIK8?si=g1vW4X3y8ZSJnYzA&amp;controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></li>
-  <li><iframe width=auto id="video" height=auto src="https://www.youtube.com/embed/eJlH1ieQIK8?si=g1vW4X3y8ZSJnYzA&amp;controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></li>
-
-</ul>
-
-<!-- <div class="flex-container">
+<div class="flex-container">
   <div><iframe width=auto id="video" height=auto src="https://www.youtube.com/embed/CSAcxQA2shE?si=3f2fQxLz2MCTbuRQ&amp;controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
   <div><iframe width=auto id="video" height=auto src="https://www.youtube.com/embed/bPLhbmqbLcs?si=ajwgSfEx1K6NNNpp&amp;controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
@@ -50,6 +28,5 @@ li {
   <div><iframe width=auto id="video" height=auto src="https://www.youtube.com/embed/0Ua8_c0Nphg?si=E-8nPZgLUBOp0nX2&amp;controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
   <div><iframe width=auto id="video" height=auto src="https://www.youtube.com/embed/eJlH1ieQIK8?si=g1vW4X3y8ZSJnYzA&amp;controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
   <div><iframe width=auto id="video" height=auto src="https://www.youtube.com/embed/eJlH1ieQIK8?si=g1vW4X3y8ZSJnYzA&amp;controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
--->
 </body>
 </html>
