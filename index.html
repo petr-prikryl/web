@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My Personal Blog</h1>
+</header>
+
+<section>
+    <h2>Public Posts</h2>
+    <p>This is the public section of my blog.</p>
+    <!-- List your public blog posts here -->
+</section>
+
+<section>
+    <h2>Password Protected Section</h2>
+
+    <!-- Password Form -->
+    <form action="" method="post">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Content of the protected section -->
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $password = $_POST['password'];
+        if ($password === 'petr') {
+            echo '<p>Welcome to the protected section!</p>';
+            // Display protected content here
+        } else {
+            echo '<p>Incorrect password. Please try again.</p>';
+        }
+    }
+    ?>
+
+</section>
+
+<footer>
+    <p>&copy; 2023 Your Name</p>
+</footer>
+
+</body>
+</html>
