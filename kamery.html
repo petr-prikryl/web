@@ -2,18 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <title>YouTube Video Grid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive YouTube Grid</title>
   <style>
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-      height: 0;
-      overflow: hidden;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
 
-    .video-container iframe {
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+      padding: 16px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    }
+
+    .video {
       position: absolute;
       top: 0;
       left: 0;
@@ -24,43 +34,20 @@
 </head>
 <body>
 
-<div class="container-fluid mt-4">
-  <div class="row">
-    <!-- Video 1 -->
-    <div class="col-md-3 mb-4">
-      <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/CSAcxQA2shE?autoplay=1&mute=1&showinfo=0&controls=0" allow="autoplay allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <!-- Video 2 -->
-    <div class="col-md-3 mb-4">
-      <div class="video-container">
-       <iframe src="https://www.youtube.com/embed/bPLhbmqbLcs?autoplay=1&mute=1&showinfo=0&controls=0" allow="autoplay allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <!-- Repeat similar blocks for videos 3 to 8 -->
-
+<div class="grid-container">
+  <div class="video-wrapper">
+    <iframe class="video" src="https://www.youtube.com/embed/CSAcxQA2shE?autoplay=1&controls=0&mute=1" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="video-wrapper">
+    <iframe class="video" src="https://www.youtube.com/embed/bPLhbmqbLcs?autoplay=1&controls=0&mute=1" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="video-wrapper">
+    <iframe class="video" src="https://www.youtube.com/embed/9d0Jzl2cNJU?autoplay=1&controls=0&mute=1" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="video-wrapper">
+    <iframe class="video" src="https://www.youtube.com/embed/cMukxZRThvk?autoplay=1&controls=0&mute=1" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script>
-  // Adjust video size based on the number of videos
-  document.addEventListener("DOMContentLoaded", function() {
-    var videos = document.querySelectorAll('.video-container iframe');
-    var numVideos = videos.length;
-
-    videos.forEach(function(video) {
-      // Adjust the height based on the number of videos
-      video.style.height = (100 / numVideos) + 'vh';
-    });
-  });
-</script>
 
 </body>
 </html>
